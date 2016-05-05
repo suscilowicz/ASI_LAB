@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :books
+  
   get 'sessions/new'
 
   root              'static_pages#home'
@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   resources :users
-
-  resources :users
+  resources :books
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process

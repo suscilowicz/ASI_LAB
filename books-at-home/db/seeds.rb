@@ -8,7 +8,7 @@ User.create!(name:  "Example User",
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  title = "book#{n+1}"
+  title = Faker::Book.title
   author = Faker::Name.name
   User.create!(name:  name,
                email: email,

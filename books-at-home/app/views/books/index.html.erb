@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <%= will_paginate %>
-<h1>Books</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th colspan="12"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <h1>Books</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
     <% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
@@ -23,8 +22,11 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+  </table>
+</div>
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<h1><%= link_to 'Add New Book', new_book_path %></h1>
+
+
